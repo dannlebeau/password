@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Contraseñas</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- minify -->
+<link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+<!-- latest -->
+<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+<!-- core style only -->
+<link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="nes-container with-title container">
+    <h1 class="title">Generador de Contraseñas</h1>
+    <form id="generadorForm">
+      <label for="length" class="nes-text">Longitud de caracteres:</label>
+      <select id="length" class="nes-select">
+        <option value="6">6</option>
+        <option value="10">10</option>
+        <option value="14">14</option>
+        <option value="20">20</option>
+      </select>
+
+      <label class="nes-text">
+        <input type="checkbox" id="includeSymbols"> Incluir símbolos
+      </label>
+
+      <label class="nes-text">
+        <input type="checkbox" id="includeNumbers"> Incluir números
+      </label>
+
+      <label class="nes-text">
+        <input type="checkbox" id="includeSpecialChars"> Incluir caracteres especiales
+      </label>
+
+      <label class="nes-text">
+        <input type="checkbox" id="excludeVowels"> Excluir vocales
+      </label>
+
+      <button type="button" class="nes-btn is-primary" onclick="generarContrasena()">Generar Contraseña</button>
+      <div id="contrasenaGenerada" class="nes-text"></div>
+    </form>
+  </div>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
